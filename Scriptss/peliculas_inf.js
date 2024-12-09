@@ -71,4 +71,22 @@ function mostrarResultado(){
 
 }
 
+function actualizarPuntaje(valor) {
+    // Verificar si valor está definido
+    if (valor !== undefined) {
+        // Solo actualizar el puntaje si se seleccionó una opción
+        puntaje = clave[i][valor] + puntaje;
+    }
+
+    i = i + 1;
+    
+    // Verificar si hay más preguntas
+    if (i < preguntas.length) {
+        mostrarPreguntas();  // Mostrar la siguiente pregunta
+    } else {
+        mostrarResultado();  // Mostrar los resultados finales
+    }
+}
+
+
 mostrarPreguntas();
